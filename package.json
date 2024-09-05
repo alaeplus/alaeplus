@@ -6,7 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "next": "14.2.8",
@@ -19,10 +25,12 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.8",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-unused-imports": "^4.1.3",
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
     "typescript": "^5"
   }
 }
