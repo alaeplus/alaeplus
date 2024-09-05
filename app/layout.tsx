@@ -1,12 +1,14 @@
 import '@/styles/globals.css'
 
 import { NextIntlClientProvider } from 'next-intl'
-import { getLocale, getMessages } from 'next-intl/server'
+import { getLocale, getMessages, getTranslations } from 'next-intl/server'
 
-export const metadata = {
-  title: 'ALAE+',
-  description:
-    "Solution de facturation pour les structures d'accueil périscolaire",
+export async function generateMetadata() {
+  const t = await getTranslations('app.root.metadata')
+  return {
+    title: t('title'),
+    description: t('description'),
+  }
 }
 
 export default async function RootLayout({

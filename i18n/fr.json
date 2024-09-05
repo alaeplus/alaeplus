@@ -1,0 +1,10 @@
+{
+  "app": {
+    "root": {
+      "metadata": {
+        "title": "ALAE+",
+        "description": "Solution de facturation pour les structures d'accueil périscolaire"
+      }
+    }
+  }
+}
